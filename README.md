@@ -1,4 +1,4 @@
-# CSSHexagonGrid-wClip-Path
+# HonecombBar
 CSS Basic Hexagon Grid aka Honecomb
 Using CSS Clip-Path and Grid
 
