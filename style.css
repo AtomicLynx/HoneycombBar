@@ -1,0 +1,62 @@
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(15deg, goldenrod, #000000);
+}
+
+p {
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+
+
+.hexGrid {
+  width: 1000px; /* original value */
+  margin: 1%;
+  /* background-color: mediumaquamarine; */
+}
+
+.hexGridA {
+  width: 960px; /* % of .hexGrid.width: (.hex.width x 0.75) x (..grid-auto-rows x2) + ((.hex.width x 0.1) x 3), for size + space between hexes */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px; /* original value */
+  margin-top: 5px; /* ..grid-auto-rows x 0.05, for space between hexes verticaly, .hexGridA + .hexGridB work in conjunction */
+  /* background-color: gold; */
+}
+
+.hexGridB {
+  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px; /* original value */
+  margin-left: 160px; /* (.hex.width x 0.75) + (..grid-auto-rows x 0.10), for size + space between hexes (.hexGridA and .hexGridB) */
+  margin-top: 5px; 
+  /* background-color: pink; */
+}
+
+.hex {
+  display: flex;
+  position: relative;
+  width: 200px; /* ..grid-auto-rows x 2, to creates overflow to grid-auto-rows */
+  height: 200px; /* ..grid-auto-rows x 2, to creates overflow to grid-auto-rows */
+  background: linear-gradient(15deg, #424242, #000000);
+  clip-path: polygon(25% 0%, 75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);
+}
+
+.hex:hover {
+  background: linear-gradient(15deg, goldenrod, #000000);
+  transition: 5s;
+}
+
